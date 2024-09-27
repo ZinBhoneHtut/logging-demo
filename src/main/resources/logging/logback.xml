@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <include resource="logging/logback-common.xml" />
+    <include resource="logging/appenders.xml" />
+
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_SIMPLE" />
+    </root>
+
+
+    <logger name="com.logging.demo" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE_DETAIL" />
+        <appender-ref ref="ROLLING_FILE" />
+    </logger>
+
+    <logger name="com.logging.demo.config" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE_SIMPLE" />
+    </logger>
+
+    <logger name="com.logging.demo.LoggingDemoApplication" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE_SIMPLE" />
+    </logger>
+
+</configuration>
